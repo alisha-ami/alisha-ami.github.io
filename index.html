@@ -57,6 +57,7 @@ body {
 .at_num {
   top: 4px;
   right: 5px;
+  font-size: 10px;
 }
 .symbol {
   position: absolute;
@@ -74,43 +75,6 @@ body {
   left: 0px;
   right: 0px;
 }
-/*
-.cell:nth-child(-n+2) .element,
-.cell:nth-child(n+13) .element {
-  background-color: rgba(0, 160, 96, 0.6);
-} 
-
-.cell:nth-child(1) .element,
-.periodic-row:nth-child(2) .cell:nth-child(n+14) .element,
-.periodic-row:nth-child(3) .cell:nth-child(n+15) .element,
-.periodic-row:nth-child(4) .cell:nth-child(n+16) .element,
-.periodic-row:nth-child(5) .cell:nth-child(n+17) .element {
-  background-color: rgba(0, 192, 64, 0.6);
-}
-.periodic-row:nth-child(-n+6) .cell:nth-child(18) .element {
-  background-color: rgba(64, 192, 0, 0.6);
-}
-.periodic-row:nth-child(n+9) .element {
-  background-color: rgba(0, 96, 160, 0.6);
-}
-.cell:nth-child(-n+2):hover .element,
-.cell:nth-child(n+13):hover .element {
-  background-color: rgba(0, 160, 96, 0.9);
-}
-.cell:nth-child(1):hover .element,
-.periodic-row:nth-child(2) .cell:nth-child(n+14):hover .element,
-.periodic-row:nth-child(3) .cell:nth-child(n+15):hover .element,
-.periodic-row:nth-child(4) .cell:nth-child(n+16):hover .element,
-.periodic-row:nth-child(5) .cell:nth-child(n+17):hover .element {
-  background-color: rgba(0, 192, 64, 0.9);
-}
-.periodic-row:nth-child(-n+6) .cell:nth-child(18):hover .element {
-  background-color: rgba(64, 192, 0, 0.9);
-}
-.periodic-row:nth-child(n+9) .cell:hover .element {
-  background-color: rgba(0, 96, 160, 0.9);
-} */
-
 
 .groupAlkaliMetal, .cell:hover .groupAlkaliMetal{ background-color: ff0000; }
 .groupAlkalineEarth, .cell:hover .groupAlkalineEarth { background-color: #ffa500; }
@@ -122,8 +86,6 @@ body {
 .groupNobleGas, .cell:hover .groupNobleGas { background-color: #411add; }
 .groupLanthanide, .cell:hover .groupLanthanide { background-color: DarkViolet; }
 .groupActinide, .cell:hover .groupActinide { background-color: MediumOrchid; }
-
-
 
 .cell:nth-child(1) .element {
   -webkit-transform-origin: 0 50%;
@@ -169,6 +131,9 @@ body {
     font-size: 4px;
     opacity: 1;
   }
+  .at_num {
+    font-size: 10px;
+  }
   .symbol {
     margin-top: -17px;
     font-size: 16px;
@@ -195,6 +160,9 @@ body {
   .at_details {
     font-size: 5px;
   }
+  .at_num {
+    font-size: 11px;
+  }
   .symbol {
     font-size: 24px;
   }
@@ -206,6 +174,9 @@ body {
   .at_num,
   .at_details {
     font-size: 6px;
+  }
+  .at_num {
+    font-size: 12px;
   }
   .symbol {
     font-size: 30px;
@@ -230,10 +201,23 @@ body {
     <div class="cell"></div>
     <div class="cell"></div>
     <div class="cell"></div>
+    <div class="cell" style="width:11.10%;">
+		<span class="groupAlkaliMetal">Alkali Metal</span><br/>
+		<span class="groupAlkalineEarth">Alkaline Earth</span><br/>
+		<span class="groupTransitionMetal">Transition Metal</span><br/>
+		<span class="groupBasicMetal">Basic Metal</span><br/>
+		<span class="groupSemiMetal">Semimetal</span><br/>
+	</div>
+    <div class="cell" style="width:11.10%;">
+		<span class="groupNonMetal">Non Metal</span><br/>
+		<span class="groupHalogen">Halogen</span><br/>
+		<span class="groupNobleGas">Noble Gas</span><br/>
+		<span class="groupLanthanide">Lanthanide</span><br/>
+		<span class="groupActinide">Actinide</span>	
+	</div>	
+    <!--div class="cell"></div>
     <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
+    <div class="cell"></div-->
     <div class="cell"></div>
     <div class="cell"></div>
     <div class="cell"></div>
@@ -886,7 +870,7 @@ body {
       </div>
     </div>
   </div>
-  <div class="periodic-row"></div>
+  <div class="periodic-row" style="height:25px;"></div>
   <div class="periodic-row">
     <div class="cell"></div>
     <div class="cell"></div>
